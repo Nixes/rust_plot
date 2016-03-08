@@ -1,6 +1,6 @@
 [package]
 name = "rust_plot"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Nixes <randomdude7@gmail.com>"]
 
 [lib]
