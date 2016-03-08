@@ -1,0 +1,55 @@
+[root]
+name = "rust_plot"
+version = "0.1.0"
+dependencies = [
+ "piston2d-graphics 0.15.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "interpolation"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "piston-float"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "piston-texture"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "piston-viewport"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "piston-float 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "piston2d-graphics"
+version = "0.15.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "interpolation 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "piston-texture 0.3.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "piston-viewport 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "read_color 0.1.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "vecmath 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
+[[package]]
+name = "read_color"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+
+[[package]]
+name = "vecmath"
+version = "0.2.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+dependencies = [
+ "piston-float 0.2.0 (registry+https://github.com/rust-lang/crates.io-index)",
+]
+
