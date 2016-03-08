@@ -56,9 +56,7 @@ impl Plot {
             println!("Gen sample: {}",i * step_amount);
         }
     }
-    pub fn draw <G>(&mut self, context: Context, graphics: &mut G)
-                                        where G: Graphics<Texture=B::Texture>,
-    {
+    pub fn draw <G: Graphics>(&mut self, context: Context, graphics: &mut G) {
         for (item_no,&item) in self.line_values.iter().enumerate() {
             //println!("One bar drawn value: {} number: {}",item,itemNo);
             let color = Plot::get_color(item,200);
