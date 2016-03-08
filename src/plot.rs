@@ -1,7 +1,15 @@
 //use graphics::{ self, Graphics, ImageSize };
 use graphics::*;
 
+/* // to be implemented
+enum PlotType {
+    Bar,
+    Line,
+    SmoothLine,
+} */
+
 pub struct Plot {
+    // TODO: add x and y position
     line_values: Vec<u32>,
     line_max_samples: usize, // number of samples to show before dropping values from the beginning
     line_height_scale_factor:f64, // how much to multiply the sample value by to produce the number of pixels high the line is
@@ -40,7 +48,8 @@ impl Plot {
         }
         color
     }
-    pub fn add_sample (&mut self,sample:u32) {
+    // adds a data point to the plot
+    pub fn add_point (&mut self,sample:u32) {
         if self.line_values.len() >= self.line_max_samples {
             self.line_values.remove(0);// remove oldest value / value in first index
             self.line_values.push(sample); // then add latest value to end
@@ -48,11 +57,12 @@ impl Plot {
             self.line_values.push(sample); // not yet filled so just add value
         }
     }
+    #[test]
     pub fn gen_test(&mut self,min:u32,max:u32) {
         let step_amount: u32 = (max - min) / self.line_max_samples as u32;
 
         for i in 0..self.line_max_samples as u32 {
-            self.add_sample(i * step_amount);
+            self.add_point(i * step_amount);
             println!("Gen sample: {}",i * step_amount);
         }
     }
