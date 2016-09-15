@@ -8,4 +8,4 @@ name = "rust_plot"
 path = "./src/lib.rs"
 
 [dependencies]
-piston2d-graphics = "0.15.0"
+piston2d-graphics = "0.16.0"
